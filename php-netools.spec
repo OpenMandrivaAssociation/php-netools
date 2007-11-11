@@ -7,7 +7,7 @@
 Summary:	Networking tools for PHP
 Name:		php-%{modname}
 Version:	0.2
-Release:	%mkrel 7
+Release:	%mkrel 8
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/netools
@@ -48,6 +48,18 @@ EOF
 
 bzcat %{SOURCE1} > %{buildroot}%{_sysconfdir}/php.d/%{inifile}
 install -m755 %{soname} %{buildroot}%{_libdir}/php/extensions/
+
+%post
+if [ -f /var/lock/subsys/httpd ]; then
+    %{_initrddir}/httpd restart >/dev/null || :
+fi
+
+%postun
+if [ "$1" = "0" ]; then
+    if [ -f /var/lock/subsys/httpd ]; then
+	%{_initrddir}/httpd restart >/dev/null || :
+    fi
+fi
 
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
