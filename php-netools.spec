@@ -17,6 +17,7 @@ Requires:	php-cli >= 3:5.2.0
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	lcrzo-devel
 BuildRequires:	libpcap-devel >= 0.7.2
+BuildRoot:	%{_tmppath}/%{name}-root
 
 %description
 Netools provides tools to deal with devices, TCP and UDP clients/servers, etc.
