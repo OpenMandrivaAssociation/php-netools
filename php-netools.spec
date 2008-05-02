@@ -7,7 +7,7 @@
 Summary:	Networking tools for PHP
 Name:		php-%{modname}
 Version:	0.2
-Release:	%mkrel 9
+Release:	%mkrel 10
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/netools
@@ -17,7 +17,7 @@ Requires:	php-cli >= 3:5.2.0
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	lcrzo-devel
 BuildRequires:	libpcap-devel >= 0.7.2
-BuildRoot:	%{_tmppath}/%{name}-root
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Netools provides tools to deal with devices, TCP and UDP clients/servers, etc.
