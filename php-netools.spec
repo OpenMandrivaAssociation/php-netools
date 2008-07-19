@@ -7,7 +7,7 @@
 Summary:	Networking tools for PHP
 Name:		php-%{modname}
 Version:	0.2
-Release:	%mkrel 11
+Release:	%mkrel 12
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/netools
