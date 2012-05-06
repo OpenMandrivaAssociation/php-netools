@@ -13,6 +13,7 @@ License:	PHP License
 URL:		http://pecl.php.net/package/netools
 Source0:	%{modname}-%{version}.tar.bz2
 Source1:	%{modname}.ini.bz2
+Patch0:		netools-0.2-php54x.diff
 Requires:	php-cli >= 3:5.2.0
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	lcrzo-devel
@@ -25,6 +26,8 @@ Netools provides tools to deal with devices, TCP and UDP clients/servers, etc.
 %prep
 
 %setup -q -n %{modname}-%{version}
+
+%patch0 -p0
 
 %build
 %serverbuild
