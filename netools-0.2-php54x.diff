@@ -1,0 +1,11 @@
+--- netools.c	2002-12-12 13:12:09.000000000 +0100
++++ netools.c.oden	2012-05-06 12:07:22.772458133 +0200
+@@ -34,7 +34,7 @@ ZEND_DECLARE_MODULE_GLOBALS(netools)
+ 
+ /* {{{ netools_functions[] */
+ /* only general functions here, not class methods */
+-function_entry netools_functions[] = {
++zend_function_entry netools_functions[] = {
+ 	PHP_FE(netools_device_enum, NULL)
+ 	{NULL, NULL, NULL}
+ };
