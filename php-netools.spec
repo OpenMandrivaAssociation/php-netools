@@ -10,7 +10,7 @@ Version:	0.2
 Release:	32
 Group:		Development/PHP
 License:	PHP License
-URL:		http://pecl.php.net/package/netools
+URL:		https://pecl.php.net/package/netools
 Source0:	%{modname}-%{version}.tar.bz2
 Source1:	%{modname}.ini.bz2
 Patch0:		netools-0.2-php54x.diff
