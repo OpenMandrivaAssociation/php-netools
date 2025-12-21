@@ -15,6 +15,11 @@ Source0:	%{modname}-%{version}.tar.bz2
 Source1:	%{modname}.ini.bz2
 Patch0:		netools-0.2-php54x.diff
 Requires:	php-cli >= 3:5.2.0
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	lcrzo-devel
 BuildRequires:	libpcap-devel >= 0.7.2
